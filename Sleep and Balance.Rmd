@@ -1,0 +1,80 @@
+---
+title: "Sleep and Balance Literature Review Analysis"
+author: "Andrea Contreras"
+date: "2024-04-06"
+output: html_document
+---
+
+```{r}
+library(dplyr)
+
+data <- read.csv("Literature_Review_ALP.csv", header = TRUE)
+
+data <- data[, -c(1, 3, 24)]  # Exclude the author and sleep vars (listed) columns
+
+# Create the new column with the number of sleep variables measured
+data <- data %>%
+  mutate(numOfSleepVariables = rowSums(.[, 2:17]))
+
+# Create the new column with the number of sensors
+data <- data %>%
+  mutate(numOfSensors = rowSums(.[, 18:21]))
+
+attach(data)
+
+names(data)
+
+head(data)
+```
+
+First, we converted the data table including each article and the sensors that their sleep monitoring device used along with the sleep outcomes they measured and analyzed into binary data in order to run logistic regressions on them. Our goal was to determine whether a device having a specific sensor is indicative of a sleep outcome variable being measured.
+
+```{r}
+mean(Acceleration.Sensor)
+mean(Ultraviolet.Sensor)
+mean(Temperature.Sensor)
+mean(Heart.Rate.Sensor)
+```
+Of the 29 articles we reviewed, 93.5% of them use sleep monitoring devices with an acceleration sensor, 29% of them use sleep monitoring devices with an ultraviolet sensor, 22.5% of them use sleep monitoring devices with a temperature sensor, and 48% of them use sleep monitoring devices with a heart rate sensor.
+
+```{r}
+# Fit Poisson regression model
+model <- glm(numOfSleepVariables ~ Acceleration.Sensor + Heart.Rate.Sensor + Ultraviolet.Sensor + Temperature.Sensor, data = data, family = "poisson")
+
+# View summary of the model
+summary(model)
+
+```
+
+We fit a Poisson regression model to predict the number of sleep outcome variables measured in an article based on the presence of an acceleration sensor, heart rate sensor, ultraviolet sensor, and/or temperature sensor in the sleep monitoring device.
+
+However, we found that there is not enough evidence to conclude that any of these sensors have a significant effect on the number of sleep outcomes measured (respective Pr(>|z|) of 0.577, 0.286, 0.133, 0.344). Therefore, the presence or absence of these sensors does not significantly predict the number of sleep outcome variables measured in a research articles. 
+
+```{r}
+# Load logistf package for logistic regression
+library(logistf)
+
+# List of sleep outcome variables
+sleep_vars <- c("TST", "SOL", "SE", "WASO", "Awake.time", "Wake.time", 
+                "Bed.time", "FUSP", "TIB", "Fragmentation.Index", 
+                "LST", "DST", "REM", "Nap", "position", "temperature")
+
+# List of sensor names
+predictor_names <- c("Acceleration.Sensor", "Heart.Rate.Sensor", 
+                     "Ultraviolet.Sensor", "Temperature.Sensor")
+
+# Logistic regression models for each sleep outcome variable
+for (sleep_var in sleep_vars) {
+  formula <- as.formula(paste(sleep_var, "~", paste(predictor_names, collapse = " + ")))
+  
+  model <- logistf(formula, data = data)
+  
+  # Print summary of the model
+  cat("\nSummary for", sleep_var, ":\n")
+  print(summary(model))
+}
+```
+We wanted to then look at whether sensor presence had an effect on each specific sleep outcome variables.
+We used traditional logistic regression (because of the binary variables) with penalized maximum likelihood estimation (Firth's method) to handle separation issues. We  performed the regression for each sleep variable (TST, SOL, SE, etc.) individually, using the presence of the four sensors (Acceleration.Sensor, Heart.Rate.Sensor, Ultraviolet.Sensor, Temperature.Sensor) as predictors.
+
+For the majority of the sleep outcome variables, such as TST, temperature, position, nap variables, REM, fragmentation index, TIB, FUSP, Bed time, Wake time, and WASO, none of the coefficients in the model were statistically significant. This implies that none of the sensors have a significant relationship with the sleep outcome variable being included in the study analysis. However, for DST (deep sleep time), LST (light sleep time), Awake time (the amount of time a person is awake during an interrupted sleep period), and SOL (sleep onset latency) the presence of a heart rate sensor is a significant indicator of these sleep outcome variables being measured (p-values, respectively: 0.01368633, 0.01368633, 0.001031741, 0.03316939). Additionally, for SE (sleep efficiency), the presence of an ultraviolet sensor is also a significant indicator of the sleep outcome variable being included in the article (p-value: 0.02617407). This suggests that these sensors may play a role in monitoring and predicting these aspects of sleep quality and duration.
