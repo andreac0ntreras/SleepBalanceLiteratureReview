@@ -4,9 +4,9 @@ Over the course of the semester, we transcribed data from 29 articles regarding 
 
 After transcribing data from 29 articles, we converted the data into binary data indicating whether a sensor was included in a sleep monitoring device and whether a sleep outcome variable was measured
 
-**Goal**
+**Goal**:
 
-To determine whether a device having a specific sensor is indicative of a sleep outcome variable being measured.
+**To determine whether a device having a specific sensor is indicative of a sleep outcome variable being measured.**
 
 
 93.5% articles use sleep monitoring devices with an acceleration sensor, 29% with an ultraviolet sensor, 22.5% with a temperature sensor, and 48% with a heart rate sensor.
