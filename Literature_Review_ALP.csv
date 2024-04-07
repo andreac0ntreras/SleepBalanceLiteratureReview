@@ -1,0 +1,114 @@
+First Author and Year,Sleep tracking device,Sleep outcome from wearables,TST,SOL,SE,WASO,Awake time,Wake time,Bed time,FUSP,TIB,Fragmentation Index,LST,DST,REM,Nap,position,temperature,Acceleration Sensor,Heart Rate Sensor,Ultraviolet Sensor,Temperature Sensor,Other (specify)
+"Agmon, 2016",Actigraph,"TST 
+SOL
+SE        ",1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,
+"Ataka, 2022",Silmee W20,"TST
+WASO
+SE
+Awake time   ",1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,
+"Bernstein, 2021",Withings Steel ,"TST
+Wake time
+Bed time",1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,
+"Cabanas-Sanchez, 2020",ActiGraph GT9X ,"TST
+Bed time
+Wake time 
+SE
+WASO",1,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,1,0,1,0,
+"Chapple, 2020",Withings Steel ,"FUSP = First Uninterrupted Sleep Period
+Awake time
+SE",0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,1,1,0,0,
+"Chellappa, 2022",Actiwatch-L,"Bed time
+Wake time
+TIB
+TST
+SE
+Fragmentation Index",1,0,1,0,0,1,1,0,1,1,0,0,0,0,0,0,1,0,1,0,
+"Concheiro-Moscoso, 2022",Xiaomi Mi Band 2,"
+TST 
+LST
+DST
+WASO",1,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,1,1,0,0,Vibration Engine
+"Faerman, 2020",Sleep-watch-O,"SE
+TST 
+SOL
+WASO",1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+"Fioranzato, 2021",Garmin Vivoactive 3 ,TST,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,"Barometer, compass, GPS"
+"Lach, 2019",MotionWatch 8 ,"TST
+SE
+TIB",1,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,1,0,
+"Lach, 2019","
+BeClose",TIB,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,"1. N/A
+2. wireless motion and weight sensors"
+"Huang, 2022",Actiwatch SpectrumPro,"TST
+SE
+WASO",1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,
+"Kim, 2023",Fitbit Charge HR ,"TST
+Awake time
+SE
+LST
+DST
+REM",1,0,1,0,1,0,0,0,0,0,1,1,1,0,0,0,1,1,0,0,MEMS micro altimeter module
+"Kim, 2020",Xiaomi Mi Band Pulse 1S,"DST
+LST
+TST
+Awake time
+SE",1,0,1,0,1,0,0,0,0,0,1,1,0,0,0,0,1,1,0,0,"pedometer, blood oxygen, GPS"
+"Kimura, 2019",Silmee W20,"
+TST 
+WASO
+SE
+Awake time
+Nap time",1,0,1,1,1,0,0,0,0,0,0,0,0,1,0,0,1,1,1,1,
+"Kimura et al., 2020",Silmee W20 ,"
+TST 
+WASO
+SE
+Awake time
+Nap time",1,0,1,1,1,0,0,0,0,0,0,0,0,1,0,0,1,1,1,1,
+"Lee et al., 2022",Fitbit Alta 2 Wristwatch,"TST
+WASO
+SOL
+SE",1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+"Li P et al, 2021",Actical,"Nap time
+Nap frequency
+TST
+Fragmentation Index ",1,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,
+"Liu J et al, 2020",Fitbit Alta,"Sleep HR
+Wake HR",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+"Merilahti, 2016",IST WristCare,"TST
+SE
+Awakening count
+Activity deviation",1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+"Miranda-Duro, 2021",Xiaomi Mi Band 2,"Awake time
+DST
+LST
+TST",1,0,0,0,1,0,0,0,0,0,1,1,0,0,0,0,1,1,0,0,Vibration Engine
+"Mishra, 2021",PAMSys,TIB,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,
+"Rajouyan, 2018",PAMSys,"TIB
+SOL
+TST
+WASO
+SE
+Sleep position",1,1,1,1,0,0,0,0,1,0,0,0,0,0,1,0,1,0,0,0,
+"Rajouyan, 2020",PAMSys,"TIB
+TST
+SOL
+WASO
+SE
+Sleep position",1,1,1,1,0,0,0,0,1,0,0,0,0,0,1,0,1,0,0,0,
+"Takamino, 2020",Fitbit Alta HR,TST,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,
+"Tedesko, 2019",Fitbit Charge 2 ,"TST
+WASO",1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,Altimeter
+"Tedesko, 2019",Garmin vivosmart HR+,"TST
+WASO",1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,
+"Wei, 2021",Xiaomi Mi Band 2 with temperature sensor ,"Sleep time
+Wake time
+TST
+Sleep temperature 
+Wake temperature ",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,1,0,1,
+"Zaslavsky, 2019",AW64 actigraph,"TST
+SE",1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+"Zhu G, 2019",Axivity AX3,TST,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+"Zulfiqar, 2021",MyPredi,"TST
+LST
+DST",1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,0,1,      
