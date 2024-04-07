@@ -5,6 +5,7 @@ Over the course of the semester, we transcribed data from 29 articles regarding 
 After transcribing data from 29 articles, we converted the data into binary data indicating whether a sensor was included in a sleep monitoring device and whether a sleep outcome variable was measured
 
 **Goal**
+
 To determine whether a device having a specific sensor is indicative of a sleep outcome variable being measured.
 
 
