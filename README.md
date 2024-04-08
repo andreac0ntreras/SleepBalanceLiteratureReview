@@ -15,7 +15,7 @@ We found that there is not enough evidence to conclude that any of these sensors
 
 We then performed the regression for each sleep variable (TST, SOL, SE, etc.) individually. 
 
-For most of the sleep outcome variables, the coefficients in the model were statistically significant. However, for DST, LST, Awake time and SOL, the presence of a heart rate sensor is a significant indicator of these sleep outcome variables being measured. Additionally, for sleep efficiency, the presence of an ultraviolet sensor is also a significant indicator of the sleep outcome variable being included in the article. This suggests that these sensors may play a role in monitoring and predicting these aspects of sleep quality and duration.
+For most of the sleep outcome variables, the coefficients in the model were not statistically significant. However, for DST, LST, Awake time and SOL, the presence of a heart rate sensor is a significant indicator of these sleep outcome variables being measured. Additionally, for sleep efficiency, the presence of an ultraviolet sensor is also a significant indicator of the sleep outcome variable being included in the article. This suggests that these sensors may play a role in monitoring and predicting these aspects of sleep quality and duration.
 
 
 
