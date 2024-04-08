@@ -19,7 +19,7 @@ For most of the sleep outcome variables, the coefficients in the model were stat
 
 
 
-To view the full statistical analysis, open the ![RMD File](https://github.com/andreac0ntreras/SleepBalanceLiteratureReview/blob/main/Sleep%20and%20Balance.Rmd) with R Studio and run all. 
+To view the full statistical analysis, open the [RMD File](https://github.com/andreac0ntreras/SleepBalanceLiteratureReview/blob/main/Sleep%20and%20Balance.Rmd) with R Studio and run all. 
 
 # Gallery
 
